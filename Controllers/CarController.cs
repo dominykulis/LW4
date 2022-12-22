@@ -24,7 +24,7 @@ public class CarController : ControllerBase
     {
         var x = await _carService.Display();
         
-        return Ok();
+        return Ok(x);
     }
 
     [HttpGet("{id}")]
@@ -32,7 +32,7 @@ public class CarController : ControllerBase
     {
         var x = await _carService.Display_ID(id);
         
-        return Ok();
+        return Ok(x);
     }
 
     [HttpPost]
@@ -40,7 +40,7 @@ public class CarController : ControllerBase
     {
         var x = await _carService.Put(carDTO);
         
-        return Ok();
+        return Ok(x);
     }
 
     [HttpPut("{id}")]
@@ -48,7 +48,7 @@ public class CarController : ControllerBase
     {
         var x = await _carService.Put_ID(id, carDTO);
         
-        return Ok();
+        return Ok(x);
     }
 
     [HttpDelete("{id}")]
@@ -56,7 +56,7 @@ public class CarController : ControllerBase
     {
         var x = await _carService.DeleteProduct(id);
         
-        return NoContent();
+        return NoContent(x);
     }
 
 

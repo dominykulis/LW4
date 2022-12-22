@@ -55,8 +55,7 @@ public class CarController : ControllerBase
     public async Task<ActionResult<object>> DeleteProduct(int id)
     {
         var x = await _carService.DeleteProduct(id);
-        
-        return NoContent(x);
+        return Ok(x);
     }
 
 
